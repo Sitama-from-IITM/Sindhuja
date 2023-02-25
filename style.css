@@ -5,7 +5,12 @@
 
 :root {
     --bg-color: blue;
-    --text-color: black;
+    --text-color: white;
+
+    --max-width-smartphone: 767px;
+    --min-width-tablet: 768px;
+    --max-width-tablet: 1023px;
+    --min-width-laptop: 1024px;
 }
 
 .h-center {
@@ -24,31 +29,71 @@
     align-items: center;
 }
 
+.text-big {
+    font-size: 41px;
+}
+
+.text-mid {
+    font-size: 24px;
+}
+
+.text-sm {
+    font-size: 18px;
+}
+
 .nav {
     position: fixed;
     height: 15vh;
     width: 100vw;
     background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .firstSection {
-    height: 85vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
-    background-image: url(Images/surface_wave.jpg);
+    /* background-image: url(Images/surface_wave.jpg); */
+    background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
+    overflow: hidden;
     background-blend-mode: darken;
     background-size: cover;
     margin: auto;
     justify-content: center;
-    color: black;
+    color: rgb(255, 0, 157);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* @media screen and (max-width: 767px) {
+    .nav {
+        visibility: hidden;
+    }
+  } */
 
 .firstHalf {
     max-width: 50%;
     display: flex;
-    margin-top: 20vh;
+    margin-top: 35vh;
     flex-direction: column;
+    text-align: center;
+}
+
+.buttons {
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    background-color: var(--bg-color);
+    border: 2px black;
+    border-radius: 10px;
+    color: var(--text-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .secondHalf {
@@ -60,15 +105,6 @@
 
 .secondHalf img {
     height: 60%;
-}
-
-.text-big {
-    font-size: 41px;
-    text-align: center;
-}
-
-.text-sm {
-    font-size: 18px;
 }
 
 .secondSection {
@@ -95,7 +131,6 @@
     left: 0%;
 }
 
-/* The progress bar (scroll indicator) */
 .progress-bar {
     height: 6px;
     background: var(--bg-color);

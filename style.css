@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
+.h-center {
+    display: flex;
+    justify-content: center;
+}
+
+.v-center {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    height: 15vh;
+    background-color: black;
+}
+
+
+.progress {
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+  }
+  @keyframes progress {
+    to {
+      background-color: rgb(20, 255, 226);
+      width: 100%;
+    }
+  }
+
+.firstSection { 
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    background-image: url(/Images/surface_wave.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    margin: auto;
+    justify-content: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.firstHalf {
+    max-width: 50%;
+    display: flex;
+    margin-top: 20vh;
+    flex-direction: column;
+}
+
+.secondHalf {
+    width: 30%;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+}
+
+.secondHalf img {
+    height: 60%;
+}
+
+.text-big {
+    font-size: 41px;
+    text-align: center;
+}
+
+.text-sm{
+    font-size: 18px;
+}
+
+.secondSection { 
+    background-color:blue;
+    height: 60vh;
+}
+
+.thirdSection { 
+    background-color:darkgrey;
+    height: 50vh;
+}
+
+.fouthSection { 
+    background-color:hotpink;
+    height: 60vh;
+}
+

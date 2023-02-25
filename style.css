@@ -35,7 +35,7 @@
     height: 85vh;
     display: flex;
     flex-direction: row;
-    background-image: url(/Images/surface_wave.jpg);
+    background-image: url(Images/surface_wave.jpg);
     background-blend-mode: darken;
     background-size: cover;
     margin: auto;

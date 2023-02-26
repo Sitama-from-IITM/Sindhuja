@@ -6,11 +6,6 @@
 :root {
     --bg-color: blue;
     --text-color: white;
-
-    --max-width-smartphone: 767px;
-    --min-width-tablet: 768px;
-    --max-width-tablet: 1023px;
-    --min-width-laptop: 1024px;
 }
 
 .h-center {
@@ -41,8 +36,83 @@
     font-size: 18px;
 }
 
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    left: 0%;
+    visibility: hidden;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid black;
+    top: 50%;
+    animation: loader 2s infinite ease;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: #ccc;
+    border: 5px solid #4973ff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wave {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #4973ff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.wave:before,
+.wave:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.wave:before {
+    border-radius: 45%;
+    background: rgba(255, 255, 255, 1);
+    animation: animate 5s linear infinite;
+}
+
+.wave:after {
+    border-radius: 40%;
+    background: rgba(255, 255, 255, .5);
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
 .nav {
-    position: fixed;
+    position: absolute;
     height: 15vh;
     width: 100vw;
     background-color: var(--bg-color);
@@ -50,25 +120,20 @@
 }
 
 .firstSection {
+    margin-top: 15vh;
     height: 100vh;
     display: flex;
     flex-direction: row;
     /* background-image: url(Images/surface_wave.jpg); */
+    /* background-size: cover; */
     background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
     overflow: hidden;
     background-blend-mode: darken;
-    background-size: cover;
     margin: auto;
     justify-content: center;
     color: rgb(255, 0, 157);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* @media screen and (max-width: 767px) {
-    .nav {
-        visibility: hidden;
-    }
-  } */
 
 .firstHalf {
     max-width: 50%;
@@ -79,6 +144,7 @@
 }
 
 .buttons {
+    margin-top: 2vh;
     height: 10vh;
     display: flex;
     justify-content: space-evenly;
@@ -97,6 +163,7 @@
 }
 
 .secondHalf {
+    font-size: 0%;
     width: 30%;
     display: flex;
     align-items: center;
@@ -136,3 +203,29 @@
     background: var(--bg-color);
     width: 0%;
 }
+
+/* Smartphone View */
+@media screen and (max-width: 767px) {
+    .buttons {
+        flex-direction: column;
+        margin-top: 3vh;
+    }
+
+    .btn {
+        margin-top: 1vh;
+    }
+
+    .secondHalf {
+        display: none;
+    }
+}
+
+/* Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .nav {
+        visibility: hidden;
+    }
+}
+
+/* Desktop View */
+@media screen and (min-width: 1024px) {}

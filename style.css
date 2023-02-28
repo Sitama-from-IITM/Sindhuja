@@ -3,9 +3,14 @@
     padding: 0%;
 }
 
+body {
+    background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
+}
+
 :root {
-    --bg-color: blue;
+    --mode-color: white; 
     --text-color: white;
+    --theme-color: blue;
 }
 
 .h-center {
@@ -39,7 +44,7 @@
 .loader-wrapper {
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color);
+    background-color: var(--theme-color);
     position: absolute;
     top: 0;
     left: 0%;
@@ -115,7 +120,7 @@
     position: absolute;
     height: 15vh;
     width: 100vw;
-    background-color: var(--bg-color);
+    background-color: var(--theme-color);
     color: var(--text-color);
 }
 
@@ -124,8 +129,6 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
-    /* background-image: url(Images/surface_wave.jpg); */
-    /* background-size: cover; */
     background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
     overflow: hidden;
     background-blend-mode: darken;
@@ -138,7 +141,7 @@
 .firstHalf {
     max-width: 50%;
     display: flex;
-    margin-top: 35vh;
+    padding-top: 35vh;
     flex-direction: column;
     text-align: center;
 }
@@ -151,7 +154,7 @@
 }
 
 .btn {
-    background-color: var(--bg-color);
+    background-color: var(--theme-color);
     border: 2px black;
     border-radius: 10px;
     color: var(--text-color);
@@ -160,6 +163,33 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 25px;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .secondHalf {
@@ -174,25 +204,147 @@
     height: 60%;
 }
 
+.pop-up-section{
+    width: 90%;
+    height: 90%;
+    border-radius: 3%;
+    background-color: var(--theme-color);
+}
+
 .secondSection {
-    background-color: blue;
-    height: 60vh;
+    background-color: var(--mode-color);
+    height: 100vh;
 }
 
 .thirdSection {
-    background-color: darkgrey;
-    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--mode-color);
+    height: 100vh;
+}
+
+.thirdSection .leftSection {
+    width: 50vw;
+}
+
+.thirdSection .rightSection {
+    width: 50vw;
+}
+
+.thirdSection .rightSection .upperSection {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: var(--theme-color);
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.author-info {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.author-info a {
+    color: white;
+}
+
+
+.slider>a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+.slider>a:active {
+    top: 1px;
+}
+
+.slider>a:focus {
+    background: #000;
+}
+
+.thirdSection .rightSection .lowerSection {
+    height: 40%;
 }
 
 .fouthSection {
-    background-color: hotpink;
-    height: 60vh;
+    background-color: var(--mode-color);
+    height: 100vh;
 }
 
 .progress-container {
     width: 100%;
     height: 6px;
-    background: white;
+    background: var(--mode-color);
     position: fixed;
     bottom: 0%;
     left: 0%;
@@ -200,7 +352,7 @@
 
 .progress-bar {
     height: 6px;
-    background: var(--bg-color);
+    background: var(--theme-color);
     width: 0%;
 }
 

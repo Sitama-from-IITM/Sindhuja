@@ -11,6 +11,11 @@ body {
     --mode-color: white; 
     --text-color: black;
     --theme-color: blue;
+    
+    --color-1: #6096B4;
+    --color-2: #93BFCF;
+    --color-3: #BDCDD6;
+    --color-4: #EEE9DA;
     --footer-color: #24262b;
 }
 

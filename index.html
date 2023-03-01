@@ -11,14 +11,67 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Clicker+Script&family=Nunito&family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     <title>Sindhuja-I</title>
 </head>
 
 <body>
-    <nav class="nav bg-theme center">
-        <h1 class="center">Navigation Bar</h1>
-    </nav>
+    <section class="navigation-bar">
+        <div class="nav-bar">
+            <div class="logo">
+                <p class="logo-text">Virya Paramita Limited</p>
+            </div>
+            <div class="left-container">
+                <div class="nav-item"><a class="hover-item" href="#">Home</a></div>
+                <div class="nav-item">
+                    <a class="hover-item" href="#">About Us</a>
+                </div>
+                <div class="nav-item">
+                    <a class="hover-item" href="#">Solutions</a>
+                </div>
+                <div class="nav-item"><a class="hover-item" href="#">News</a></div>
+                <div class="nav-item">
+                    <a class="hover-item" href="#">Partners</a>
+                </div>
+                <div class="nav-item">
+                    <a class="hover-item" href="#">Our Team</a>
+                </div>
+                <div class="drop-down-container">
+                    <button class="hover-item" id="drop-down-button">Contact Us</button>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="functionality-button">
+                    <button class="hover-item">Light/Dark</button>
+                </div>
+                <div class="functionality-button">
+                    <button class="hover-item">Language</button>
+                </div>
+            </div>
+        </div>
+        <div class="icon">
+            <i class='bx bx-chevron-down-circle'></i>
+        </div>
+    </section>
+    <section class="drop-down-section">
+        <div class="drop-down-content">
+            <div class="card">
+                <i class='bx bx-mobile bx-flip-horizontal'></i>
+                <p class="card-title">Call Us</p>
+                <p class="card-info">+91 9063666344</p>
+            </div>
+            <div class="card">
+                <i class='bx bx-current-location'></i>
+                <p class="card-title">Visit Us</p>
+                <p class="card-info">Visakhapatnam, Andhra Pradesh, India 530016</p>
+            </div>
+            <div class="card">
+                <i class='bx bxs-envelope'></i>
+                <p class="card-title">Mail Us</p>
+                <p class="card-info">hr@viryaparamita.co.in</p>
+            </div>
+        </div>
+    </section>
 
     <div class="firstSection">
         <div class="firstHalf">
@@ -51,25 +104,25 @@
         </div>
         <div class="rightSection">
             <div class="upperSection">
-                <div class="slider">                  
+                <div class="slider">
                     <div class="slides">
-                      <div id="slide-1">
-                        1
-                      </div>
-                      <div id="slide-2">
-                        2
-                      </div>
-                      <div id="slide-3">
-                        3
-                      </div>
-                      <div id="slide-4">
-                        4
-                      </div>
-                      <div id="slide-5">
-                        5
-                      </div>
+                        <div id="slide-1">
+                            1
+                        </div>
+                        <div id="slide-2">
+                            2
+                        </div>
+                        <div id="slide-3">
+                            3
+                        </div>
+                        <div id="slide-4">
+                            4
+                        </div>
+                        <div id="slide-5">
+                            5
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="lowerSection">stats</div>
         </div>
@@ -83,9 +136,9 @@
     </div>
 
     <!-- Footer -->
-    
 
-   
+
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -160,8 +213,8 @@
         </div>
 
     </footer>
-     <!-- Progress Bar -->
-     <div class="progress-container fixed">
+    <!-- Progress Bar -->
+    <div class="progress-container fixed">
         <div class="progress-bar" id="myBar"></div>
     </div>
     <script src="script.js"></script>

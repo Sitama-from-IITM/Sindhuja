@@ -9,13 +9,14 @@ body {
 
 :root {
     --mode-color: white; 
-    --text-color: white;
+    --text-color: black;
     --theme-color: blue;
     
     --color-1: #6096B4;
     --color-2: #93BFCF;
     --color-3: #BDCDD6;
     --color-4: #EEE9DA;
+    --footer-color: #24262b;
 }
 
 .h-center {
@@ -121,13 +122,170 @@ body {
     }
 }
 
-.nav {
+/* Styles for Navigation Bar */
+/* .nav {
     position: absolute;
     height: 15vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--theme-color);
     color: var(--text-color);
-}
+} */
+
+.left-container, .right-container {
+    background-color: black;
+  }
+  
+  .logo-text {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 4%;
+  }
+  
+  .logo{
+    display: flex;
+    width: 10%;
+    background-color: black;
+  }
+  
+    .nav-bar {
+      display: flex;
+      margin: auto;
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .nav-item a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2vw;
+      font-weight: bold;
+      padding: 1vw;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 3.4vw;
+    }
+  
+    .drop-down-container button {
+      border: none;
+      background-color: inherit;
+      color: blue;
+      font-size: 1.2vw;
+      font-weight: bold;
+      padding: 1vw;
+    }
+  
+    .drop-down-content{
+      font-family: arial;
+      display: none;
+      width: 90%;
+      margin: auto;
+    }
+  
+    .card{
+      width: 33.33%;
+      margin: 3vw 1vw;
+      box-shadow: 0px 3px 10px 0px rgb(0 0 0 /12%);
+      border-radius: 3%;
+    }
+  
+    .card i{
+      font-size: 3vw;
+      width: 100%;
+      text-align: center;
+      padding: 1vw 0;
+    }
+  
+    .card-title{
+      font-size: 1.5vw;
+      font-weight: bold;
+      text-align: center;
+      padding: 1vw 0;
+    }
+  
+    .card-info{
+      text-align: center;
+      padding: 0.5vw 0;
+    }
+  
+    .functionality-button button {
+      border: none;
+      background-color: inherit;
+      font-size: 1.2vw;
+      font-weight: bold;
+      padding: 1vw;
+      color: white;
+    }
+  
+    .hover-item:hover {
+      color: red;
+    }
+  
+  @media screen and (min-width: 767px){
+  
+    .icon{
+      display: none;
+    }
+  
+    .left-container {
+      display: flex;
+      width: 75%;
+      justify-content: start;
+    }
+  
+    .right-container {
+      display: flex;
+      width: 15%;
+      justify-content: end;
+    }
+  
+  }
+  
+  @media screen and (max-width: 767px) and (min-width: 320px) {
+  
+    .navigation-bar{
+      background-color: rgba(0,0,0,0.3);
+    }
+  
+    .left-container,.right-container {
+      display: none;
+      text-align: center;
+      background-color: rgba(0,0,0,0.3)
+    }
+  
+    .logo {
+      width: 80%;
+      font-size: 1.5rem;
+    }
+  
+    .logo-text{
+      padding: 2%;
+    }
+  
+    .icon{
+      background-color: black;
+      color: white;
+      width: 20%;
+      display: flex;
+      justify-content: end;
+      font-size: 2.55rem;
+      position: absolute;
+      top: 0%;
+      right: 0;
+      padding: 0.1rem
+    }
+  
+    .nav-item,.drop-down-container,.functionality-button{
+      padding: 1.2rem;
+    }
+  
+    .left-container .hover-item,.right-container .hover-item{
+      font-size: 1.2rem;
+    }
+  
+    }
+  
+
 
 .firstSection {
     margin-top: 15vh;
@@ -361,35 +519,35 @@ body {
     width: 0%;
 }
 
-.container {
+.footer-container {
 
     max-width: 1170px;
     margin: auto;
 }
 
-.row {
+.footer-row {
     display: flex;
     flex-wrap: wrap;
 }
 
-ul {
+.footer-col ul {
     list-style: none;
 }
 
 .footer {
-    background-color: #24262b;
+    background-color:var(--footer-color);
     padding: 70px 0;
 
 }
 
 .footer-col {
-    width: 20%;
-    padding: 0 15px;
+    width: 30%;
+    padding: 0 63px;
 }
 
 .footer-col h4 {
     font-size: 18px;
-    color: #ffffff;
+    color:var(--text-color);
     text-transform: capitalize;
     margin-bottom: 35px;
     font-family: 'Poppins', sans-serif;
@@ -416,7 +574,7 @@ ul {
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
-    color: #ffffff;
+    color:var(--text-color);
     text-decoration: none;
     font-weight: 300;
     color: #bbbbbb;
@@ -425,7 +583,7 @@ ul {
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    color: var(--text-color);
     padding-left: 8px;
 }
 
@@ -444,7 +602,7 @@ ul {
 
 .footer-col .social-links a:hover {
     color: #24262b;
-    background-color: #ffffff;
+    background-color: var(--text-color);
 
 }
 

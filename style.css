@@ -11,6 +11,7 @@ body {
     --mode-color: white; 
     --text-color: white;
     --theme-color: blue;
+    --footer-color: #24262b;
 }
 
 .h-center {
@@ -119,7 +120,7 @@ body {
 .nav {
     position: absolute;
     height: 15vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--theme-color);
     color: var(--text-color);
 }
@@ -356,35 +357,35 @@ body {
     width: 0%;
 }
 
-.container {
+.footer-container {
 
     max-width: 1170px;
     margin: auto;
 }
 
-.row {
+.footer-row {
     display: flex;
     flex-wrap: wrap;
 }
 
-ul {
+.footer-col ul {
     list-style: none;
 }
 
 .footer {
-    background-color: #24262b;
+    background-color:var(--footer-color);
     padding: 70px 0;
 
 }
 
 .footer-col {
-    width: 20%;
-    padding: 0 15px;
+    width: 30%;
+    padding: 0 63px;
 }
 
 .footer-col h4 {
     font-size: 18px;
-    color: #ffffff;
+    color:var(--text-color);
     text-transform: capitalize;
     margin-bottom: 35px;
     font-family: 'Poppins', sans-serif;
@@ -411,7 +412,7 @@ ul {
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
-    color: #ffffff;
+    color:var(--text-color);
     text-decoration: none;
     font-weight: 300;
     color: #bbbbbb;
@@ -420,7 +421,7 @@ ul {
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    color: var(--text-color);
     padding-left: 8px;
 }
 
@@ -439,7 +440,7 @@ ul {
 
 .footer-col .social-links a:hover {
     color: #24262b;
-    background-color: #ffffff;
+    background-color: var(--text-color);
 
 }
 

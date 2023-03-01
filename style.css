@@ -11,6 +11,11 @@ body {
     --mode-color: white; 
     --text-color: white;
     --theme-color: blue;
+    
+    --color-1: #6096B4;
+    --color-2: #93BFCF;
+    --color-3: #BDCDD6;
+    --color-4: #EEE9DA;
 }
 
 .h-center {

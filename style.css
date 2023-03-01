@@ -357,7 +357,7 @@ body {
 }
 
 /* Smartphone View */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .buttons {
         flex-direction: column;
         margin-top: 3vh;
@@ -369,6 +369,24 @@ body {
 
     .secondHalf {
         display: none;
+    }
+
+    .thirdSection {
+        flex-direction: column;
+        height: 200vh;
+    }
+
+    .thirdSection .leftSection , .thirdSection .rightSection {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .thirdSection .rightSection .upperSection {
+        height: 60vh;
+    }
+
+    .thirdSection .rightSection .lowerSection {
+        height: 40vh;
     }
 }
 

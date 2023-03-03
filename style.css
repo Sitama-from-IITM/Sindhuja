@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
 
 :root {
     --mode-color: white;
+    --footer-color: #24262b;
     --text-color: black;
     --theme-color: #6096B4;
     --theme-color-element: #93BFCF;
@@ -464,6 +466,7 @@ body {
 }
 
 .footer {
+    background-color: var(--footer-color);
     background-color: var(--theme-color);
     padding: 70px 0;
 
@@ -532,6 +535,31 @@ body {
 .footer-col .social-links a:hover {
     color: #24262b;
     background-color: var(--text-color);
+
+}
+
+#Scroll-top {
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+
+
+}
+
+#Scroll-top:hover {
+    background-color:black;
+    color:white
+
 
 }
 
@@ -643,5 +671,4 @@ body {
         width: 15%;
         justify-content: end;
     }
-
 }

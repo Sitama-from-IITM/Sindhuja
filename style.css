@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -8,7 +9,7 @@ body {
 }
 
 :root {
-    --mode-color: white; 
+    --mode-color: white;
     --text-color: white;
     --theme-color: blue;
     --footer-color: #24262b;
@@ -205,7 +206,7 @@ body {
     height: 60%;
 }
 
-.pop-up-section{
+.pop-up-section {
     width: 90%;
     height: 90%;
     border-radius: 3%;
@@ -373,7 +374,7 @@ body {
 }
 
 .footer {
-    background-color:var(--footer-color);
+    background-color: var(--footer-color);
     padding: 70px 0;
 
 }
@@ -385,7 +386,7 @@ body {
 
 .footer-col h4 {
     font-size: 18px;
-    color:var(--text-color);
+    color: var(--text-color);
     text-transform: capitalize;
     margin-bottom: 35px;
     font-family: 'Poppins', sans-serif;
@@ -412,7 +413,7 @@ body {
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
-    color:var(--text-color);
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 300;
     color: #bbbbbb;
@@ -444,6 +445,30 @@ body {
 
 }
 
+#Scroll-top {
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+
+
+}
+
+#Scroll-top:hover {
+    background-color:black;
+    color:white
+
+
+}
 
 @media(max-width:574px) {
     .footer-col {
@@ -463,6 +488,7 @@ body {
         flex-direction: column;
         margin-top: 3vh;
     }
+
     .secondHalf {
         display: none;
     }
@@ -472,7 +498,8 @@ body {
         height: 200vh;
     }
 
-    .thirdSection .leftSection , .thirdSection .rightSection {
+    .thirdSection .leftSection,
+    .thirdSection .rightSection {
         width: 100%;
         height: 100vh;
     }
@@ -484,10 +511,9 @@ body {
     .thirdSection .rightSection .lowerSection {
         height: 40vh;
     }
-    
+
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
     }
 }
-

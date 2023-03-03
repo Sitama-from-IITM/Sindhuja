@@ -2,8 +2,6 @@
 Wave Energy Project
 ## Introduction
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 Website for Sindhuja-I: Wave Energy Project.
 
 ## Features

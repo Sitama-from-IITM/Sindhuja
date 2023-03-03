@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    margin: 10% 0;
+}
+
+.heading-div p {
+    padding: 5%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.image-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.data-card {
+    width: 150px;
+    height: 220px;
+    background-color: aqua;
+    color: black;
+}
+
+.data-card img {
+    width: 150px;
+    height: 150px;
+    border: black;
+}
+
+.data-card .name {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.data-card .name, .data-card .occupation {
+    text-align: center;
+}
+
+/* Smartphone View */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .image-div {
+        flex-wrap: wrap;
+    }
+
+    .data-card {
+        margin-bottom: 10px;
+    }
+
+}
+
+/* Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    
+}
+
+/* Desktop View */
+@media screen and (min-width: 1024px) {
+    
+}

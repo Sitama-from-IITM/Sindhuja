@@ -22,36 +22,61 @@ function myFunction() {
 
 
 /* Script for navigation bar */
+const cardButtonEl = document.querySelector('.card-button');
+const cardContentEl = document.querySelector('.card-content');
+const navBarLinks = document.querySelectorAll(".topnav a,.topnav button");
 
-const dropDownButtonEl = document.getElementById('drop-down-button');
-const dropDownContentEl = document.querySelector('.drop-down-content');
-const navBarLinksEl = document.querySelectorAll('.nav-item');
+/* Adding Responsiveness to Navigation Bar */
+function addDropDown() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+
+}
+
+/* Removing Drop down on clicking card button */
+function removeDropDown(){
+  var x = document.getElementById("myTopnav");
+  if (x.className === "responsive") {
+    x.className -= "responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
 /* Adding Functionality to Contact Us Button */
-dropDownButtonEl.addEventListener('click', function(){
-    if(dropDownContentEl.style.display == 'flex')
-      dropDownContentEl.style.setProperty('display', 'none');
-    else 
-      dropDownContentEl.style.setProperty('display', 'flex');
-  });
+cardButtonEl.addEventListener('click', function ContactUs(){
   
-  /* Removing Dropdown Content if any Nav Bar Button other than Contact Us is Clicked */
-  for(var i = 0; i < navBarLinksEl.length; i++){
-  navBarLinksEl[i].addEventListener('click', function(){
-    dropDownContentEl.style.setProperty('display', 'none');
+    if(cardContentEl.style.display == 'table')
+      cardContentEl.style.setProperty('display', 'none');
+    else 
+      cardContentEl.style.setProperty('display', 'table');
+      removeDropDown();
   });
-  }
 
-document.querySelector('.icon').addEventListener('click', function(){
-  {
-    document.querySelector('.nav-bar').style.setProperty('display', 'block');
-    var x = document.querySelectorAll(".left-container,.right-container");
-      for(var i = 0; i < x.length; i++){
-      if (x[i].style.display === "block") {
-        x[i].style.display = "none";
-      } else {
-        x[i].style.display = "block";
-      }
-    }
+/* Adding Sticky Functionality to Navigation Bar */
+  window.onscroll = function() {stickyFunction()};
+
+var navbar = document.querySelector(".navigation-bar");
+var sticky = navbar.offsetTop;
+
+function stickyFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
   }
-});
+}
+
+/* Removing card Content if any Nav Bar Button other than Contact Us is Clicked */ 
+console.log(navBarLinks);
+for (let i = 0; i < navBarLinks.length; i++) {
+  if(i!==7){
+   navBarLinks[i].addEventListener('click',function(e){
+    cardContentEl.style.setProperty('display', 'none');
+   });
+  }
+}

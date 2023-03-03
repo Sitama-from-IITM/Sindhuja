@@ -7,54 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Images/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/e00d984517.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Clicker+Script&family=Nunito&family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     <title>Sindhuja-I</title>
 </head>
 
 <body>
     <section class="navigation-bar">
-        <div class="nav-bar">
-            <div class="logo">
-                <p class="logo-text">Virya Paramita Limited</p>
-            </div>
-            <div class="left-container">
-                <div class="nav-item"><a class="hover-item" href="#">Home</a></div>
-                <div class="nav-item">
-                    <a class="hover-item" href="#">About Us</a>
-                </div>
-                <div class="nav-item">
-                    <a class="hover-item" href="#">Solutions</a>
-                </div>
-                <div class="nav-item"><a class="hover-item" href="#">News</a></div>
-                <div class="nav-item">
-                    <a class="hover-item" href="#">Partners</a>
-                </div>
-                <div class="nav-item">
-                    <a class="hover-item" href="#">Our Team</a>
-                </div>
-                <div class="drop-down-container">
-                    <button class="hover-item" id="drop-down-button">Contact Us</button>
-                </div>
-            </div>
-            <div class="right-container">
-                <div class="functionality-button">
-                    <button class="hover-item">Light/Dark</button>
-                </div>
-                <div class="functionality-button">
-                    <button class="hover-item">Language</button>
-                </div>
-            </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#" id="active" class="active">Vidya Paramita Limited</a>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Solutions</a>
+            <a href="#">News</a>
+            <a href="#">Partners</a>
+            <a href="#">Our Team</a>
+            <button class="card-button">Contact Us</button>
+            <button class="right">Dark/Light</button>
+            <button class="right">Language</button>
+            <a href="javascript:void(0);" class="icon" onclick="addDropDown()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
-        <div class="icon">
-            <i class='bx bx-chevron-down-circle'></i>
-        </div>
-    </section>
-    <section class="drop-down-section">
-        <div class="drop-down-content">
+        <div class="card-content">
             <div class="card">
                 <i class='bx bx-mobile bx-flip-horizontal'></i>
                 <p class="card-title">Call Us</p>

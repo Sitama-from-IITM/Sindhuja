@@ -21,10 +21,13 @@ function myFunction() {
 // }
 
 
-/* Script for navigation bar */
+/* -------------------------------------------------------Script for navigation bar-------------------------------------------------- */
+
+
 const cardButtonEl = document.querySelector('.card-button');
 const cardContentEl = document.querySelector('.card-content');
 const navBarLinks = document.querySelectorAll(".topnav a,.topnav button");
+
 
 /* Adding Responsiveness to Navigation Bar */
 function addDropDown() {
@@ -80,3 +83,4 @@ for (let i = 0; i < navBarLinks.length; i++) {
    });
   }
 }
+

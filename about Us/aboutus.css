@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+  }
+
+  
+*, *:before, *:after {
+    box-sizing:inherit;
+  }
+
+ 
+  
+  .about-column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  .about-team{
+
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 40px 8px;
+
+  }
+  .our-team{
+
+/* display: block;
+top: 30px; */
+
+  }
+  .about-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  .about-content{
+padding-bottom: 30px;
+
+  }
+
+
+  .aboutus-section {
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+    /* background-color: #474e5d; */
+    color: rgb(27, 24, 24);
+  }
+
+  .aboutus-logos{
+
+font-size: 40px;
+  }
+ 
+
+  .about-container {
+    padding: 0 16px;
+  }
+
+  .about-container::after, .about-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+@media screen and (max-width: 727px) {
+    .about-column {
+      width: 100%;
+      /* display: block; */
+    }
+  }
